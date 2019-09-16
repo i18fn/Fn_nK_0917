@@ -1,0 +1,16 @@
+body { color: #333333}
+
+p { font-size: 14px}
+
+.PageTitle {
+    font-size: 26px;
+    background-color: #F2F2E5;
+    border-bottom: solid 1px #F2F2E5;
+    padding: 4px 15px;
+}
+.heading-typeA {
+    font-size: 18px;
+    color: rgb(0, 168, 8);
+    border-left: solid 5px #E3E4D9;
+    padding-left: 10px;
+}
