@@ -7,6 +7,7 @@ window.onload = function() {
         })
         .then(() => {
             // start to use LIFF's api
+            alert("success");
             login();
             initializeApp();
         })
