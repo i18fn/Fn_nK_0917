@@ -31,9 +31,10 @@ function initializeApp() {
         .then(profile => {
             name = profile.displayName;
             userId = profile.userId;
+            alert(profile.displayName + " userId : " + profile.userId);
         })
         .catch((err) => {
             alert("ERROR");
         });
-    alert(name + " userId : " + userId);
+    alert(liff.isLoggedIn());
 }
