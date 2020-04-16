@@ -18,7 +18,7 @@ window.onload = function() {
 
 function login() {
     if (!liff.isLoggedIn()) {
-        liff.login({ redirectUri: "https://localhost:3000" });
+        liff.login();
     }
 }
 /**
