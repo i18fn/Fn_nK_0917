@@ -2,27 +2,27 @@
 <html lang="ja">
 
 <head>
-  <meta charset=utf-8>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>LIFF Starter</title>
-  <style src="index.css">
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>お客様情報入力フォーム</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-  <form method="post" action="https://script.google.com/macros/s/AKfycbxI6RSBsOao-vS70STpufE5pazil66-S2ZXdcqJdYWmNE02zhle/exec">
-    名前<br>
-    <input class="textinput" type="text" name="name" placeholder="山田太郎"><br>
-    カタカナ<br>
-    <input class="textinput" type="text" name="namekana" placeholder="ヤマダタロウ"><br>
-    性別<br>
-    <input type="radio" name="gender" value="男性">男性
-    <input type="radio" name="gender" value="女性">女性
-    <input type="radio" name="gender" value="女性">どちらでもない<br>
-  </form>
-  <button id="bt">送信</button>
-  
-  <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
-  <script src="index.js">
+    <form method="post" action="https://script.google.com/macros/s/AKfycbxI6RSBsOao-vS70STpufE5pazil66-S2ZXdcqJdYWmNE02zhle/exec">
+        名前<br>
+        <input class="textinput" type="text" name="name" placeholder="山田太郎"><br> カタカナ
+        <br>
+        <input class="textinput" type="text" name="namekana" placeholder="ヤマダタロウ"><br> 性別
+        <br>
+        <input type="radio" name="gender" value="男性">男性
+        <input type="radio" name="gender" value="女性">女性
+        <input type="radio" name="gender" value="女性">どちらでもない<br>
+    </form>
+    <button id="bt">送信</button>
+
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
