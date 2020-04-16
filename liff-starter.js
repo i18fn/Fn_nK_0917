@@ -3,7 +3,7 @@ window.onload = function() {
     alert("onload");
     liff
         .init({
-            liffId: myLiffId
+            liffId: liffId
         })
         .then(() => {
             // start to use LIFF's api
