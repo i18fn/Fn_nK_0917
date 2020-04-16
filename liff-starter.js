@@ -7,6 +7,7 @@ window.onload = function() {
         })
         .then(() => {
             // start to use LIFF's api
+            login();
             initializeApp();
         })
         .catch((err) => {
@@ -14,6 +15,11 @@ window.onload = function() {
         });
 };
 
+function login() {
+    if (!liff.isLoggedIn()) {
+        liff.login({ redirectUri: "https://localhost:3000" });
+    }
+}
 /**
  * Initialize the app by calling functions handling individual app components
  */
@@ -22,12 +28,11 @@ function initializeApp() {
     var userId = "";
     liff.getProfile()
         .then(profile => {
-            name   = profile.displayName;
+            name = profile.displayName;
             userId = profile.userId;
         })
         .catch((err) => {
-            alert("CANNOT GET PROFILE");
-            console.log('error', err);
+            alert("ERROR");
         });
     alert(name + " userId : " + userId);
 }
