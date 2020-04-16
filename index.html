@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>Title</title>
-        <link rel="stylesheet" href="./index.css">
-    </head>
-    <body>
-        <header>
-            <h1 class="PageTitle">GitHub.io</h1>
-            <p>GitHub.ioのテストです。<br>
-            色々やっていけたらいいなあと思います。</p>
-        </header>
-        <section class="IntroSection">
-            <h2 class="heading-typeA">Self-introduction</h2>
-            <ul>
-                <li>Furuta Naoki</li>
-                <li>NITTC IE2</li>
-            </ul>
-        </section>
-        <section class="PortfolioSection">
-            <h2 class="heading-typeA">Portfolio</h2>
-            <table>
-                <tr>
-                    <th>2019.03</th>
-                    <td>Pythonでアクションゲームの作成</td>
-                </tr>
-                <tr>
-                    <th>2019.05</th>
-                    <td>Raspberry Pi3で簡易テルミンの作成</td>
-                </tr>
-            </table>
 
-        </section>
+<head>
+  <meta charset=utf-8>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LIFF Starter</title>
+  <?!= include('form_css'); ?>
+</head>
 
-        <section class="LinkSection">
-            <h2 class="heading-typeA">Link</h2>
-            <ul>
-                <li>Twitter</li>
-                <li>GitHub</li>
-                <li>YouTube</li>
-            </ul>
-        </section>
-    </body>
+<body>
+  <form method="post" action="https://script.google.com/macros/s/AKfycbxI6RSBsOao-vS70STpufE5pazil66-S2ZXdcqJdYWmNE02zhle/exec">
+    名前<br>
+    <input class="textinput" type="text" name="name" placeholder="山田太郎"><br>
+    カタカナ<br>
+    <input class="textinput" type="text" name="namekana" placeholder="ヤマダタロウ"><br>
+    性別<br>
+    <input type="radio" name="gender" value="男性">男性
+    <input type="radio" name="gender" value="女性">女性
+    <input type="radio" name="gender" value="女性">どちらでもない<br>
+  </form>
+  <button id="bt">送信</button>
+  
+  <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+  <script type="text/javascript">
+  liff.init({
+        liffId: "1654083267-9dX8zMJO"
+      })
+      .then(() => {
+        const accessToken = liff.getAccessToken();
+        alert(accessToken);
+      })
+      .catch((err) => {
+        alert("error");
+        alert([err.code, err.message]);
+      });
+    
+  document.getElementById("bt").onclick = bt_clicked;
+  
+  function bt_clicked() {
+    liff.getProfile()
+    .then(function(profile) {
+      liff.sendMessages([{
+        type: 'text',
+        text: 'From:' + profile.displayName
+      }])
+      .then(function() {
+        liff.closeWindow();
+      })
+      .catch(function(error) {
+        window.alert('Error sending message: ' + error.message);
+      });
+    })
+  }
+  
+  </script>
+</body>
+
 </html>
