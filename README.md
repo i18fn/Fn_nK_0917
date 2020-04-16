@@ -1,2 +1,2 @@
 # i18fn.github.io
-https://i18fn.github.io/index.html
+https://i18fn.github.io
