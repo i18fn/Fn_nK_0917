@@ -1,5 +1,6 @@
 window.onload = function() {
     const liffId = "1654083267-9dX8zMJO";
+    alert("onload");
     liff
         .init({
             liffId: myLiffId
