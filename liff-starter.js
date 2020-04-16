@@ -25,6 +25,7 @@ function initializeApp() {
             userId = profile.userId;
         })
         .catch((err) => {
+            alert("CANNOT GET PROFILE");
             console.log('error', err);
         });
     alert(name + " userId : " + userId);
