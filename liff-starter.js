@@ -17,10 +17,13 @@ document.getElementById("btn").onclick = function () {
     var name = document.getElementsByName("name");
     var namekana = document.getElementsByName("namekana");
     var gender = document.getElementsByName("gender");
-    var profile = liff.getProfile();
+    var profile = liff.getProfile()
+        .catch((err) => {
+            alert("cannot read profile")
+        });
     var userId = profile.userId();
-    sendData(name, namekana, gender, userId);
-    alert("send");
+    sendData(name, namekana, gender, userId)
+
 }
 
 function login() {
@@ -39,8 +42,14 @@ function sendData(name, namekana, gender, userId) {
         gender: gender,
         userId: userId
     };
-    fetch(url, {
-        method: "POST",
-        body: JSON.stringify(data)
-    });
+    await fetch(url, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+        .then(() => {
+            alert("send success");
+        })
+        .catch((err) => {
+            alert(err);
+        });
 }
