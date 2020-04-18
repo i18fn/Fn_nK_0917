@@ -14,14 +14,16 @@ window.onload = function() {
 
 document.getElementById("btn").onclick = function () {
     alert("aaa");
-    var name = document.getElementsByName("name");
-    var namekana = document.getElementsByName("namekana");
-    var gender = document.getElementsByName("gender");
+    var name = document.getElementsByName("name").value;
+    var namekana = document.getElementsByName("namekana").value;
+    var gender = document.getElementsByName("gender").value;
     var profile = liff.getProfile()
         .catch((err) => {
             alert("cannot read profile")
         });
     var userId = profile.userId;
+    alert(userId);
+    
     sendData(name, namekana, gender, userId)
 }
 
@@ -48,7 +50,7 @@ function sendData(name, namekana, gender, userId) {
         })
         .then(() => {
             alert("send success");
-            liff.close();
+            liff.closeWindow();
         })
         .catch((err) => {
             alert(err);
