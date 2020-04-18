@@ -48,6 +48,7 @@ function sendData(name, namekana, gender, userId) {
         })
         .then(() => {
             alert("send success");
+            liff.close();
         })
         .catch((err) => {
             alert(err);
