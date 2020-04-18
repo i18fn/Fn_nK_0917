@@ -23,7 +23,6 @@ document.getElementById("btn").onclick = function () {
         });
     var userId = profile.userId();
     sendData(name, namekana, gender, userId)
-
 }
 
 function login() {
@@ -42,7 +41,7 @@ function sendData(name, namekana, gender, userId) {
         gender: gender,
         userId: userId
     };
-    await fetch(url, {
+    fetch(url, {
             method: "POST",
             body: JSON.stringify(data)
         })
