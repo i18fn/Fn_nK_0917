@@ -21,7 +21,7 @@ document.getElementById("btn").onclick = function () {
         .catch((err) => {
             alert("cannot read profile")
         });
-    var userId = profile.userId();
+    var userId = profile.userId;
     sendData(name, namekana, gender, userId)
 }
 
