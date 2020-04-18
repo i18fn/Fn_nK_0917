@@ -43,6 +43,7 @@ function sendData(name, namekana, gender, userId) {
     };
     fetch(url, {
             method: "POST",
+            mode: 'cors',
             body: JSON.stringify(data)
         })
         .then(() => {
