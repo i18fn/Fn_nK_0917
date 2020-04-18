@@ -13,6 +13,7 @@ window.onload = function() {
 };
 
 document.getElementById("btn").onclick = function () {
+    alert("aaa");
     var name = document.getElementsByName("name");
     var namekana = document.getElementsByName("namekana");
     var gender = document.getElementsByName("gender");
@@ -38,7 +39,7 @@ function sendData(name, namekana, gender, userId) {
         gender: gender,
         userId: userId
     };
-    await fetch(url, {
+    fetch(url, {
         method: "POST",
         body: JSON.stringify(data)
     });
