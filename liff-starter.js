@@ -18,9 +18,9 @@ document.getElementById("btn").onclick = function () {
     var gender = "";
     var userId = "";
 
-    name = document.getElementsById("name").value;
-    namekana = document.getElementsById("namekana").value;
-    gender = document.getElementsById("gender").value;
+    name = document.getElementById("name").value;
+    namekana = document.getElementById("namekana").value;
+    gender = document.getElementById("gender").value;
     liff.getProfile()
         .then(profile => {
             userId = profile.userId;
