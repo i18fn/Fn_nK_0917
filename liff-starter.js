@@ -25,16 +25,11 @@ document.getElementById("btn").onclick = function () {
         .then(profile => {
             userId = profile.userId;
             alert(userId);
+            sendData(name, namekana, gender, userId);
         })
         .catch(err => {
             alert(err);
         });
-    alert("Name : " + name);
-    alert("Namekana : " + namekana);
-    alert("gender : " + gender);
-    alert("UserId : " + userId);
-    
-    sendData(name, namekana, gender, userId);
 }
 
 function login() {
