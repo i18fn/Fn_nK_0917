@@ -6,7 +6,6 @@ window.onload = function() {
         })
         .then(() => {
             login();
-            alert("UserId : " + liff.getProfile().userId);
         })
         .catch((err) => {
             alert(err.code + err.message);
@@ -14,21 +13,28 @@ window.onload = function() {
 };
 
 document.getElementById("btn").onclick = function () {
-    alert("aaa");
-    var name = document.getElementsByName("name").value;
-    var namekana = document.getElementsByName("namekana").value;
-    var gender = document.getElementsByName("gender").value;
-    var profile = liff.getProfile()
-        .catch((err) => {
-            alert("cannot read profile")
+    var name = "";
+    var namekana = "";
+    var gender = "";
+    var userId = "";
+
+    name = document.getElementsById("name").value;
+    namekana = document.getElementsById("namekana").value;
+    gender = document.getElementsById("gender").value;
+    liff.getProfile()
+        .then(profile => {
+            userId = profile.userId;
+            alert(userId);
+        })
+        .catch(err => {
+            alert(err);
         });
-    var userId = profile.userId;
     alert("Name : " + name);
     alert("Namekana : " + namekana);
     alert("gender : " + gender);
     alert("UserId : " + userId);
     
-    sendData(name, namekana, gender, userId)
+    sendData(name, namekana, gender, userId);
 }
 
 function login() {
