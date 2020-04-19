@@ -24,7 +24,6 @@ document.getElementById("btn").onclick = function () {
     liff.getProfile()
         .then(profile => {
             userId = profile.userId;
-            alert(userId);
             sendData(name, namekana, gender, userId);
         })
         .catch(err => {
@@ -54,7 +53,6 @@ function sendData(name, namekana, gender, userId) {
             body: JSON.stringify(data)
         })
         .then(() => {
-            alert("send success");
             liff.closeWindow();
         })
         .catch((err) => {
