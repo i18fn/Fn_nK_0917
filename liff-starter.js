@@ -6,10 +6,10 @@ window.onload = function() {
         })
         .then(() => {
             login();
-            alert("UserId : " + profile.userId);
+            alert("UserId : " + liff.getProfile().userId);
         })
         .catch((err) => {
-            alert("ERROR");
+            alert(err.code + err.message);
         });
 };
 
