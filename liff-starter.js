@@ -6,6 +6,7 @@ window.onload = function() {
         })
         .then(() => {
             login();
+            alert("UserId : " + profile.userId);
         })
         .catch((err) => {
             alert("ERROR");
@@ -22,7 +23,10 @@ document.getElementById("btn").onclick = function () {
             alert("cannot read profile")
         });
     var userId = profile.userId;
-    alert(userId);
+    alert("Name : " + name);
+    alert("Namekana : " + namekana);
+    alert("gender : " + gender);
+    alert("UserId : " + userId);
     
     sendData(name, namekana, gender, userId)
 }
