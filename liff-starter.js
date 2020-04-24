@@ -17,17 +17,22 @@ document.getElementById("btn").onclick = function () {
     var namekana = "";
     var gender = "";
     var userId = "";
+    var flag = false;
 
     name = document.getElementById("name").value;
     namekana = document.getElementById("namekana").value;
-
     gender = document.getElementById("radiobox").gender.value;
 
-    // gender = document.getElementById("gender").value;
+    if (name === "" || namekana === "" || gender === "") {
+        alert("必要な情報を入力してください");
+        return;
+    }
+
     liff.getProfile()
         .then(profile => {
             userId = profile.userId;
             sendData(name, namekana, gender, userId);
+            liff.closeWindow();
         })
         .catch(err => {
             alert(err);
