@@ -20,15 +20,24 @@ document.getElementById("btn").onclick = function () {
 
     name = document.getElementById("name").value;
     namekana = document.getElementById("namekana").value;
-    gender = document.getElementById("gender").value;
-    liff.getProfile()
-        .then(profile => {
-            userId = profile.userId;
-            sendData(name, namekana, gender, userId);
-        })
-        .catch(err => {
-            alert(err);
-        });
+
+    const gender2 = document.gender;
+
+    for (var i = 0; i < gender2.length; i++) {
+        if (gender2[i].checked) {
+            gender = gender2[i].value;
+        }
+    }
+    alert(gender);
+    // gender = document.getElementById("gender").value;
+    // liff.getProfile()
+    //     .then(profile => {
+    //         userId = profile.userId;
+    //         sendData(name, namekana, gender, userId);
+    //     })
+    //     .catch(err => {
+    //         alert(err);
+    //     });
 }
 
 function login() {
