@@ -14,9 +14,13 @@
         <br>
         <input class="textinput" type="text" id="namekana" name="namekana" placeholder="ヤマダタロウ"><br> 性別
         <br>
-        <input type="radio" id="gender" name="gender" value="男性">男性
-        <input type="radio" id="gender" name="gender" value="女性">女性
-        <input type="radio" id="gender" name="gender" value="女性">どちらでもない<br>
+
+        <form id="radiobox">
+            <input type="radio" id="gender" name="gender" value="男性">男性
+            <input type="radio" id="gender" name="gender" value="女性">女性
+            <input type="radio" id="gender" name="gender" value="どちらでもない">どちらでもない<br>
+        </form>
+
     <button id="btn">送信</button>
 
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
