@@ -1,3 +1,43 @@
+body {
+    margin: 0;
+}
+
 p.ms_mincho {
     font: bold large/150% "MS 明朝";
+}
+
+#sidebar {
+    width: 20%;
+    height: 100%;
+    padding-top: 4%;
+    position: sticky;
+    background-color: gray;
+    position: fixed;
+}
+
+.sidebar_item {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    display: flex;
+}
+
+.sidebar_item a {
+    margin: auto;
+    font: bold large/150% "MS 明朝";
+}
+
+#text_area {
+    width: 80%;
+    height: 100%;
+    margin-left: 20%;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: fixed;
+    background-color: rgb(206, 238, 196);
+}
+
+#text_area h1 {
+    text-align: center;
 }
