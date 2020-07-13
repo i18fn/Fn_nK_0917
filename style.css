@@ -6,26 +6,41 @@ p.ms_mincho {
     font: bold large/150% "MS 明朝";
 }
 
-#sidebar {
+ul.sidebar {
     width: 20%;
     height: 100%;
-    padding-top: 4%;
+    margin-top: 0;
+    padding-left: 0;
     position: sticky;
     background-color: gray;
     position: fixed;
 }
 
-.sidebar_item {
+.sidebar_item, .sidebar_item_current {
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 6%;
     padding-bottom: 6%;
-    display: flex;
 }
 
-.sidebar_item a {
+.sidebar_item:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+ul.sidebar li a {
     margin: auto;
+    text-align: center;
+    display: block;
     font: bold large/150% "MS 明朝";
+    text-decoration: none;
+}
+
+ul.sidebar li.sidebar_item_current a {
+    color: rgb(182, 25, 25);
+}
+
+ul.sidebar li.sidebar_item a {
+    color: black;
 }
 
 #text_area {
@@ -35,7 +50,7 @@ p.ms_mincho {
     margin-top: 0;
     margin-bottom: 0;
     position: fixed;
-    background-color: rgb(206, 238, 196);
+    background-color: whitesmoke;
 }
 
 #text_area h1 {
