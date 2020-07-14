@@ -15,10 +15,15 @@ ul.sidebar {
 }
 
 .sidebar_item, .sidebar_item_current {
-    padding-left: 3%;
+    /* padding-left: 3%;
     padding-right: 3%;
     padding-top: 6%;
-    padding-bottom: 6%;
+    padding-bottom: 6%; */
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 40px;
 }
 
 .sidebar_item:hover {
@@ -32,6 +37,8 @@ ul.sidebar li a {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
     text-decoration: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 ul.sidebar li.sidebar_item_current a {
