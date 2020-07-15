@@ -1,0 +1,11 @@
+.text_block {
+    margin-top: 4%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.text_block h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 10%;
+    border-bottom: solid 2px black;
+}
