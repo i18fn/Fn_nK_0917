@@ -78,3 +78,24 @@ body {
 .header {
     padding-bottom: 10%;
 }
+
+/* feed in */
+.scrollanime {
+    opacity: 0;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
