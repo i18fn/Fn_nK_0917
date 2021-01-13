@@ -1,65 +1,205 @@
-/* all files */
+/* global */
+html{
+    overflow-x : hidden;
+    overflow-y : auto;
+}
 
 body {
     margin: 0;
-}
-
-ul.sidebar {
-    width: 20%;
-    height: 100%;
-    margin-top: 0;
-    padding-left: 0;
-    position: sticky;
-    background-color: gray;
-    position: fixed;
-}
-
-.sidebar_item, .sidebar_item_current {
-    /* padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 6%;
-    padding-bottom: 6%; */
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    height: 40px;
-}
-
-.sidebar_item:hover {
-    background-color: rgb(70, 70, 70);
-}
-
-ul.sidebar li a {
-    margin: auto;
-    text-align: center;
-    display: block;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-ul.sidebar li.sidebar_item_current a {
-    color: rgb(182, 25, 25);
-}
-
-ul.sidebar li.sidebar_item a {
-    color: black;
-}
-
-#text_area {
-    width: 80%;
-    height: 100%;
-    margin-left: 20%;
-    margin-top: 0;
-    margin-bottom: 0;
-    position: fixed;
     background-color: whitesmoke;
-    overflow-y: scroll;
+    overflow-x : hidden;
+    overflow-y : auto;
 }
 
-#text_area h1 {
-    text-align: center;
+/* Mobile */
+@media screen and (max-width:480px) {
+    .profile {
+        margin-top: 13%;
+    }
+
+    .profile img {
+        border-radius: 50%;
+        border: 4px solid rgb(78, 78, 78);
+        width: 150px;
+        height: 150px;
+        position: relative;
+    }
+
+    #profile_image {
+        text-align: center;
+    }
+
+    .profile h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 900;
+        font-size: 35px;
+    }
+    
+    .profile h2 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        text-align: center;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 25px;
+    }
+
+    .logos {
+        margin-top: 10px;
+    }
+    
+    .logo_image_group {
+        text-align: center;
+    }
+
+    .logo_image_group img {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .profile h1, .profile h2, .section h1 {
+        color:rgb(78, 78, 78);
+    }
+    
+    .section {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    .section h1 {
+        text-align: center;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 30px;
+        margin: auto;
+    }
+    
+    .section hr {
+        color: #5e5e5e;
+        margin-top: 0;
+    }
+    
+    .header {
+        padding-bottom: 10%;
+    }
+    
+    .text_block {
+        color:rgb(99, 99, 99);
+        text-align: center;
+    }
+}
+
+/* tablet */
+@media screen and (min-width:481px) {
+    .profile {
+        margin-top: 13%;
+    }
+    
+    .profile img {
+        border-radius: 50%;
+        border: 4px solid rgb(78, 78, 78);
+        width: 150px;
+        height: 150px;
+        position: relative;
+    }
+    
+    #profile_image {
+        text-align: center;
+    }
+    
+    .profile h1 {
+        margin-top: 5px;
+        margin-bottom: 0;
+        text-align: center;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 900;
+        font-size: 40px;
+    }
+    
+    .profile h2 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        text-align: center;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 25px;
+    }
+    
+    .logos {
+        margin-top: 10px;
+    }
+    
+    .logo_image_group {
+        text-align: center;
+    }
+    
+    .logo_image_group img {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .logo_image_group img:hover {
+        cursor: pointer;
+        transform: scale(1.1, 1.1);
+        transition: 0.5s;
+    }
+    
+    .profile h1, .profile h2, .section h1 {
+        color:rgb(78, 78, 78);
+    }
+    
+    .section {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    .section h1 {
+        text-align: center;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 30px;
+        margin: auto;
+    }
+    
+    .section hr {
+        color: #5e5e5e;
+    }
+    
+    .header {
+        padding-bottom: 10%;
+    }
+    
+    .text_block {
+        color:rgb(99, 99, 99);
+        text-align: center;
+    }
+}
+
+/* laptop */
+@media screen and (min-width:769px) {
+    /* animation */
+    .scrollanime .openanime {
+        opacity: 0;
+    }
+
+    .fadeInDown {
+        animation-name: fadeInDown;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .fadeInDownFast {
+        animation-name: fadeInDown;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
 }
